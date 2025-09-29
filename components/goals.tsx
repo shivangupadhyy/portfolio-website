@@ -5,7 +5,7 @@ import { CheckCircle, Target, Calendar, Briefcase, Code2 } from "lucide-react"
 
 const goals = [
   {
-    icon: Code2,
+    icon: Calendar,
     title: "Master Full Stack Web Development",
     description: "React + Node.js + Next.js",
     status: "in-progress",

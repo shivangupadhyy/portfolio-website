@@ -23,11 +23,10 @@ export function Hero() {
         </div>
 
         <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">🎓 Incoming MCA Student (Starting Sep 2025)</p>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             💻 Aspiring Full Stack Developer + AI Engineer
           </p>
-          <p className="text-lg text-muted-foreground mb-12">📍 Based in India | Learning in public</p>
+          <p className="text-lg text-muted-foreground mb-12">📍 Based in Delhi | Learning in public</p>
         </div>
 
         <div className="animate-slide-up" style={{ animationDelay: "0.4s" }}>

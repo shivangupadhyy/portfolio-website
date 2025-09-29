@@ -12,7 +12,7 @@ const skillCategories = [
   {
     title: "Backend Development",
     skills: ["Node.js", "Express", "MongoDB", "REST APIs"],
-    color: "bg-accent/20 text-accent",
+    color: "bg-primary/20 text-primary",
   },
   {
     title: "Programming Languages",
@@ -31,7 +31,7 @@ const skillCategories = [
   },
   {
     title: "Data Structures & Algorithms",
-    skills: ["Java DSA", "Problem Solving", "Striver Sheet", "NeetCode"],
+    skills: ["CPP DSA", "Problem Solving"],
     color: "bg-destructive/20 text-destructive",
   },
 ]
