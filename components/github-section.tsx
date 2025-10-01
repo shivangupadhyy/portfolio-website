@@ -121,7 +121,7 @@ export function GitHubSection() {
           <h3 className="text-2xl font-bold mb-6 text-center">📊 Contribution Graph</h3>
           <div className="flex justify-center">
             <img
-              src={`https://ghchart.rshah.org/00d084/${username}`}
+              src={`https://ghchart.rshah.org/008000/${username}`}
               alt="GitHub Contribution Graph"
               className="rounded-lg w-full max-w-4xl"
             />

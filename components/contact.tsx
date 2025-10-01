@@ -20,7 +20,7 @@ const socialLinks = [
   {
     name: "Twitter",
     icon: Twitter,
-    href: "https://twitter.com/shivang_dev",
+    href: "https://x.com/Shiv_ang07",
     description: "Follow my learning journey",
   },
   {
