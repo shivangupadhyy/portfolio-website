@@ -62,7 +62,7 @@ export function Hero() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://twitter.com/shivang_dev"
+              href="https://x.com/Shiv_ang07"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors duration-200 hover:scale-110 transform"
