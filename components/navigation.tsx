@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -43,9 +44,12 @@ export function Navigation() {
               </a>
             ))}
           </div>
-          <Button asChild className="animate-fade-in animate-glow" style={{ animationDelay: "0.5s" }}>
-            <a href="#contact">Get In Touch</a>
-          </Button>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Button asChild className="animate-fade-in animate-glow" style={{ animationDelay: "0.5s" }}>
+              <a href="#contact">Get In Touch</a>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
