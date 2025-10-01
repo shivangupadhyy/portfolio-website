@@ -70,7 +70,7 @@ export function Hero() {
               <Twitter className="w-6 h-6" />
             </a>
             <a
-              href="mailto:shivang14071193@gmail.com"
+              href="mailto:shivangupadhyy@gmail.com"
               className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors duration-200 hover:scale-110 transform"
             >
               <Mail className="w-6 h-6" />
