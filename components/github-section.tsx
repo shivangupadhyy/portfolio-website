@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Github, GitFork, Star, Users } from "lucide-react"
+import { ClientOnly } from "./client-only"
 
 interface GitHubStats {
   public_repos: number
@@ -21,6 +22,30 @@ interface Repository {
 }
 
 export function GitHubSection() {
+  return (
+    <ClientOnly fallback={<GitHubSectionSkeleton />}>
+      <GitHubSectionContent />
+    </ClientOnly>
+  )
+}
+
+function GitHubSectionSkeleton() {
+  return (
+    <section id="github" className="py-20 px-6 bg-muted/30">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">⚡ GitHub Activity</h2>
+          <div className="animate-pulse">
+            <div className="h-8 bg-muted rounded w-64 mx-auto mb-4"></div>
+            <div className="h-4 bg-muted rounded w-96 mx-auto"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function GitHubSectionContent() {
   const [stats, setStats] = useState<GitHubStats | null>(null)
   const [repos, setRepos] = useState<Repository[]>([])
   const [loading, setLoading] = useState(true)
@@ -141,13 +166,13 @@ export function GitHubSection() {
                 className="p-6 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 animate-slide-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h4 className="font-semibold text-lg truncate pr-2">{repo.name}</h4>
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="font-semibold truncate pr-2">{repo.name}</h4>
                   <a
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Github className="w-4 h-4" />
                   </a>

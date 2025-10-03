@@ -15,8 +15,10 @@ const navItems = [
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -27,28 +29,33 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        mounted && isScrolled 
+          ? "bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-sm" 
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-primary animate-fade-in">Shivang Upadhyay</div>
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
+          <div className="text-lg font-semibold tracking-tight">
+            Shivang
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-all duration-200"
               >
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="flex items-center space-x-4">
+          
+          <div className="flex items-center space-x-2">
             <ThemeToggle />
-            <Button asChild className="animate-fade-in animate-glow" style={{ animationDelay: "0.5s" }}>
-              <a href="#contact">Get In Touch</a>
+            <Button variant="outline" size="sm" asChild>
+              <a href="#contact">Contact</a>
             </Button>
           </div>
         </div>

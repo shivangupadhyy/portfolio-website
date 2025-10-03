@@ -7,46 +7,50 @@ import { ExternalLink, Github, Calendar } from "lucide-react"
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features dark mode, smooth animations, and GitHub integration.",
+    title: "This Portfolio",
+    description: "You're looking at it! Built this from scratch to learn Next.js and showcase my work. Features dark mode, responsive design, and some cool interactions.",
     image: "/placeholder.jpg",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     liveUrl: "#",
     githubUrl: "https://github.com/shivangupadhyy/portfolio-website",
-    status: "Completed",
+    status: "Live",
     date: "2024"
   },
   {
-    title: "AI Chat Application",
-    description: "A full-stack chat application with AI integration, real-time messaging, and user authentication. Built for learning modern web development practices.",
+    title: "Learning Project #1",
+    description: "Currently building a task management app to practice full-stack development. It's my playground for learning React hooks and Node.js APIs.",
     image: "/placeholder.jpg",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB", "OpenAI API"],
+    tech: ["React", "Node.js", "MongoDB"],
     liveUrl: "#",
     githubUrl: "#",
-    status: "In Progress",
+    status: "Building",
     date: "2024"
   },
   {
-    title: "Task Management App",
-    description: "A productivity application for managing tasks and projects with drag-and-drop functionality, due dates, and team collaboration features.",
+    title: "Coming Soon",
+    description: "Planning something cool with AI integration. Stay tuned as I learn and build more projects throughout my MCA journey.",
     image: "/placeholder.jpg",
-    tech: ["Vue.js", "Express.js", "PostgreSQL", "JWT"],
+    tech: ["?", "?", "?"],
     liveUrl: "#",
     githubUrl: "#",
     status: "Planning",
     date: "2024"
-  },
-  // Add more projects as needed
+  }
 ]
 
 export function Projects() {
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">💼 My Projects</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Here are some of the projects I've been working on. Each one represents a step in my learning journey as a developer.
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-4">
+            My Work
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Things I've Built
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Each project teaches me something new. Here's what I've been working on lately.
           </p>
         </div>
 

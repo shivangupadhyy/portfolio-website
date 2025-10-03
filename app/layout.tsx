@@ -27,6 +27,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          storageKey="portfolio-theme"
         >
           <Suspense fallback={null}>{children}</Suspense>
           <Analytics />
